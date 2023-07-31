@@ -1,0 +1,128 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Quelle est la planète la plus proche du soleil ?",
+      "correct_answer": "Mercure",
+      "incorrect_answers": [
+        "Vénus",
+        "Terre",
+        "Mars"
+      ]
+    },
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Quelle est la plus grande planète du système solaire ?",
+      "correct_answer": "Jupiter",
+      "incorrect_answers": [
+        "Saturne",
+        "Mars",
+        "Terre"
+      ]
+    },
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Quelle est la plus petite planète du système solaire ?",
+      "correct_answer": "Mercure",
+      "incorrect_answers": [
+        "Mars",
+        "Vénus",
+        "Terre"
+      ]
+    },
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Quelle est la plus grande étoile connue dans l'univers ?",
+      "correct_answer": "VY Canis Majoris",
+      "incorrect_answers": [
+        "Soleil",
+        "Bételgeuse",
+        "Rigel"
+      ]
+    },
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Combien de planètes composent le système solaire ?",
+      "correct_answer": "8",
+      "incorrect_answers": [
+        "7",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Quelle est la distance moyenne entre la Terre et le Soleil ?",
+      "correct_answer": "149,6 millions de kilomètres",
+      "incorrect_answers": [
+        "100 millions de kilomètres",
+        "250 millions de kilomètres",
+        "300 millions de kilomètres"
+      ]
+    },
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Quel est le plus grand satellite naturel de la Terre ?",
+      "correct_answer": "La Lune",
+      "incorrect_answers": [
+        "Phobos",
+        "Titan",
+        "Ganymède"
+      ]
+    },
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Qu'est-ce qu'une éclipse solaire ?",
+      "correct_answer": "Le passage de la Lune devant le Soleil, bloquant la lumière",
+      "incorrect_answers": [
+        "Le passage de la Terre devant le Soleil, bloquant la lumière",
+        "Le passage d'une planète devant le Soleil, bloquant la lumière",
+        "Le passage d'une étoile devant le Soleil, bloquant la lumière"
+      ]
+    },
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Quel est le nom de la galaxie dans laquelle se trouve le système solaire ?",
+      "correct_answer": "Voie lactée",
+      "incorrect_answers": [
+        "Andromède",
+        "M81",
+        "NGC 4594"
+      ]
+    },
+    {
+      "category": "Astronomie",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Qu'est-ce qu'une comète ?",
+      "correct_answer": "Un petit corps céleste composé de glace, de gaz et de poussière",
+      "incorrect_answers": [
+        "Un astéroïde géant",
+        "Une étoile en fin de vie",
+        "Un trou noir supermassif"
+      ]
+    }
+
+
+
+  ]
+}

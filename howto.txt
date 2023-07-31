@@ -1,0 +1,3 @@
+generate new jar
+mvn clean
+mvn package

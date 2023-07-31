@@ -1,0 +1,30 @@
+#highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.high-score:hover {
+  transform: scale(1.025);
+}
+.table{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 60%;
+  text-align: center;
+}
+.thead-light{
+  background-color: #56a5eb;
+  color: white;
+}
+
+
