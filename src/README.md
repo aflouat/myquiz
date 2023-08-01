@@ -1,0 +1,2 @@
+## Myquiz - A simple quiz game
+This is a simple quiz game written in spring boot and vanilla javascript. The game is a simple quiz game where the user can choose between 3 different categories and answer 10 questions. The user can also see the highscore of the game.
