@@ -1,3 +1,5 @@
+const portNumber = 18083;
+const url = 'http://localhost:' + portNumber;
 const username = document.getElementById('username');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
@@ -35,7 +37,7 @@ const quizNumber = localStorage.getItem('quizNumber');
     };
 console.log('JSON Game:', JSON.stringify(score));
 
-    fetch('http://localhost:8081/games', {
+    fetch(url +'/games', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

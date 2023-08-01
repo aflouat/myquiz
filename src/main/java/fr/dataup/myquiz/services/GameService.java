@@ -48,11 +48,12 @@ public class GameService {
     }
     public Game getGameEntityFromDTO(GameDTO game) {
         Game gameEntity = new Game();
-        gameEntity.setId(null);
+        gameEntity.setId(game.getId());
         gameEntity.setScore(game.getScore());
-        gameEntity.setPlayer(setNewPlayer(game));
+        gameEntity.setPlayer(new Player(game.getPlayerId(), game.getPlayerNickname()));
         //save the quiz from the gameDTO
-        gameEntity.setQuiz(quizRepository.findById(game.getQuizId()).get());
+        //gameEntity.setQuiz(quizRepository.findById(game.getQuizId()).get());
+        gameEntity.setQuiz(new Quiz(game.getQuizId(), null, game.getQuizTitle()));
         //set the date to the game
         gameEntity.setDate(game.getDate());
         return gameEntity;
@@ -101,6 +102,16 @@ public class GameService {
 
     return gameDtos;
 
+    }
+    public void setQuizAndPlayer(Game gameEntity) {
+        //get the quiz from the quiz repository
+        Quiz quiz = quizRepository.findById(gameEntity.getQuiz().getId()).get();
+        //get the player from the player repository
+        Player player = playerRepository.findById(gameEntity.getPlayer().getId()).get();
+        //set the quiz to the game
+        gameEntity.setQuiz(quiz);
+        //set the player to the game
+        gameEntity.setPlayer(player);
     }
 
 }

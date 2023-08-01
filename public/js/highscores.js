@@ -1,3 +1,6 @@
+//highscores.js
+const portNumber = 18083;
+const url = 'http://localhost:' + portNumber;
 //const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 //get high scores from api localhost:8081/games
 /**
@@ -15,7 +18,7 @@
  */
 const highScoresList = document.getElementById("highScoresList");
 
-fetch("http://localhost:8081/games")
+fetch(url+"/games")
   .then(response => response.json())
   .then(highScores => {
     console.log(highScores);

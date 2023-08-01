@@ -1,4 +1,6 @@
 // game.js 
+const portNumber = 8081;
+const url = 'http://localhost:' + portNumber;
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
@@ -160,12 +162,12 @@ const incrementScore = (num) => {
 
 // Usage
 //check if the quiz title == Quiz de mathématiques I then fetch the questions
-let url='http://localhost:18083/quizzes/title/'+quizTitle.innerText;
+let fullUrl=url +'/quizzes/title/'+quizTitle.innerText;
 //get the quiz from the json file questions-media.json in the data folder 
-//let url = './data/questions-media.json';
+//let fullUrl = './data/questions-media.json';
  
 
-fetchQuestions(url ).then((questions) => {
+fetchQuestions(fullUrl ).then((questions) => {
   startGame(questions);
 });
 

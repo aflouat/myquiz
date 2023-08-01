@@ -3,6 +3,7 @@ package fr.dataup.myquiz.controllers;
 import java.util.List;
 import java.util.Optional;
 
+import org.checkerframework.checker.units.qual.g;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,7 +34,8 @@ public class GameController {
     @PostMapping
     public void createGame(@RequestBody GameDTO game) {
         Game gameEntity = gameService.getGameEntityFromDTO(game);
-
+        //populate the gameEntity with the quiz and the player
+        gameService.setQuizAndPlayer(gameEntity);
         gameService.createGameRequest(gameEntity);
     }
 
