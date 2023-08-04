@@ -1,6 +1,6 @@
 // game.js 
-const portNumber = 8081;
-const url = 'http://localhost:' + portNumber;
+//const portNumber = 8081;
+//let url = 'http://localhost:' + portNumber;
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
@@ -10,6 +10,8 @@ const loader = document.getElementById('loader');
 const game = document.getElementById('game');
 const quizTitle = document.getElementById('quizTitle');
 const quizNumber = document.getElementById('quizNumber');
+const url = '/quizzes/title/'+quizTitle.innerText;
+
 //get the image by id questionImage
 let image = document.getElementById('questionImage').getElementsByTagName('img')[0];
 //create the image array for answers
@@ -34,8 +36,9 @@ let availableQuestions = [];
 
 // CONSTANTS
 const CORRECT_BONUS = 10;
-let MAX_QUESTIONS = 10;
-
+let MAX_QUESTIONS = 1;
+//url +='/quizzes/'+quizNumber.innerText;
+console.log(url);
 // Fetching questions from the API
 const fetchQuestions = (url) => {
   return fetch(url)
@@ -162,12 +165,12 @@ const incrementScore = (num) => {
 
 // Usage
 //check if the quiz title == Quiz de mathématiques I then fetch the questions
-let fullUrl=url +'/quizzes/title/'+quizTitle.innerText;
+//let fullUrl=url +'/quizzes/title/'+quizTitle.innerText;
 //get the quiz from the json file questions-media.json in the data folder 
 //let fullUrl = './data/questions-media.json';
  
 
-fetchQuestions(fullUrl ).then((questions) => {
+fetchQuestions(url ).then((questions) => {
   startGame(questions);
 });
 

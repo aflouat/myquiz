@@ -1,6 +1,5 @@
 package fr.dataup.myquiz.entities;
 
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Objects;
 

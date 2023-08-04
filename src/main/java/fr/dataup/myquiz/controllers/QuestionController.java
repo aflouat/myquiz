@@ -60,6 +60,12 @@ public class QuestionController {
         }
         return ResponseEntity.notFound().build();
     }
+    //implement the method to get a question by its id
+    @GetMapping("/{QuestionId}")
+    public ResponseEntity<Question> getQuestionById(@PathVariable Long QuestionId) {
+        Optional<Question> Question = questionRepository.findById(QuestionId);
+        return Question.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    }
 
 
 }

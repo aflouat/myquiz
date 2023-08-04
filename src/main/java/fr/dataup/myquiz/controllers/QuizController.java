@@ -42,7 +42,6 @@ public class QuizController {
         Optional<Quiz> quiz = quizRepository.findById(quizId);
         return quiz.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
-    //TODO create a getQuizByTitle method that takes a title as a parameter and returns a quiz
     @GetMapping("/title/{title}")
     public ResponseEntity<Quiz> getQuizByTitle(@PathVariable String title) {
         Quiz quiz = quizRepository.getQuizFirstByTitle(title);

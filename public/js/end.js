@@ -1,5 +1,7 @@
-const portNumber = 18083;
-const url = 'http://localhost:' + portNumber;
+//end.js
+//const portNumber = 8081;
+//const url = 'http://localhost:' + portNumber;
+const url='/games';
 const username = document.getElementById('username');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
@@ -17,6 +19,8 @@ username.addEventListener('keyup', () => {
 
 saveHighScore = (e) => {
     e.preventDefault();
+    console.log('POST URL:', url + '/games'); // Check if the URL is correct
+
     //get the quiz title from the local storage
 const quizTitle = localStorage.getItem('quizTitle');
 //get the quiz number from the local storage
@@ -37,7 +41,7 @@ const quizNumber = localStorage.getItem('quizNumber');
     };
 console.log('JSON Game:', JSON.stringify(score));
 
-    fetch(url +'/games', {
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -48,10 +52,11 @@ console.log('JSON Game:', JSON.stringify(score));
             console.log('Success:', savedScore);
 
             // Redirect to the highscores page or any other relevant action
-            window.location.assign('./highscores.html');
+         window.location.assign('./highscores.html');
         })
         .catch(error => {
             console.error('Error:', error);
+            console.log('json:', JSON.stringify(score));
         });
 };
 

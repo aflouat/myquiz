@@ -1,7 +1,8 @@
 //highscores.js
-const portNumber = 18083;
-const url = 'http://localhost:' + portNumber;
-//const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+//const portNumber = 8081;
+//const url = 'http://localhost:' + portNumber;
+const url = "/games";
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 //get high scores from api localhost:8081/games
 /**
  * [
@@ -18,7 +19,7 @@ const url = 'http://localhost:' + portNumber;
  */
 const highScoresList = document.getElementById("highScoresList");
 
-fetch(url+"/games")
+fetch(url)
   .then(response => response.json())
   .then(highScores => {
     console.log(highScores);
